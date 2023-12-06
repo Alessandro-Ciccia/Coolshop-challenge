@@ -1,5 +1,6 @@
 import React from "react";
 
+// INPUT NUMERICO
 const Input = ({ disabled, value, onChange }) => {
   return (
     <input

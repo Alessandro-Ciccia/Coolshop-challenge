@@ -1,3 +1,5 @@
+// ICONE TASTI CALCULATOR
+
 export const Plus = () => {
   return (
     <svg

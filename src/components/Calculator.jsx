@@ -43,6 +43,7 @@ const Calculator = () => {
   };
 
   useEffect(() => {
+    // CALCOLO
     const result = rows.reduce((operator, row) => {
       if (row.enabled) {
         return row.operator === "+"
@@ -75,16 +76,19 @@ const Calculator = () => {
             key={index}
             className="flex gap-2"
           >
+            {/* SELECT OPERATORE */}
             <Select
               disabled={!row.enabled}
               value={row.operator}
               onChange={(e) => handleOperation(index, e.target.value)}
             />
+            {/* INPUT NUMERICO */}
             <Input
               value={row.value}
               onChange={(e) => handleValueChange(index, e.target.value)}
               disabled={!row.enabled}
             />
+            {/* BOTTTONI */}
             <Button
               label={row.enabled ? <Active /> : <Disabled />}
               variant={row.enabled ? "enabled" : "disabled"}
@@ -100,6 +104,7 @@ const Calculator = () => {
       </motion.div>
     );
   } else {
+    // SE NON CI SONO RIGHE
     return (
       <motion.div
         initial={{ opacity: 0, y: 100 }}

@@ -1,3 +1,5 @@
+// COMPONENTE BOTTONE ADATTABILE
+
 const ButtonVariants = {
   add: "bg-blue-600 hover:bg-blue-700 transition-all p-2 rounded-md text-white",
   enabled:

@@ -1,3 +1,4 @@
+// SELECT OPERATORE MATEMATICO
 const Select = ({ disabled, value, onChange }) => {
   return (
     <select
