@@ -28,10 +28,10 @@ const Calculator = () => {
     setRows(newRows);
   };
 
-  //   cambio operatore
+  //   cambio risultato
   const handleValueChange = (index, newValue) => {
     const newRows = [...rows];
-    newRows[index].value = Number(newValue) || 0;
+    newRows[index].value = Number(newValue) || "";
     setRows(newRows);
   };
 
@@ -65,7 +65,8 @@ const Calculator = () => {
       >
         <div className="flex gap-5 items-center justify-between -mb-24 bg-slate-300 rounded-md p-2">
           <p className="text-3xl">
-            Risultato: <span className="font-bold">{result} </span>
+            Risultato:{" "}
+            <span className="font-bold">{result.toLocaleString("it-IT")} </span>
           </p>
           <Button label={<Plus />} variant="add" onClick={handleAddRow} />
         </div>
