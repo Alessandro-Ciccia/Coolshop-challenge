@@ -10,6 +10,7 @@ const Input = ({ disabled, value, onChange }) => {
       value={value}
       onChange={onChange}
       min={0}
+      max={100}
     />
   );
 };
