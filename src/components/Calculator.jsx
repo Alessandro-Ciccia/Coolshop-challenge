@@ -11,7 +11,7 @@ const Calculator = () => {
 
   //   aggiunta riga
   const handleAddRow = () => {
-    setRows([...rows, { operator: "+", value: 0, enabled: true }]);
+    setRows([...rows, { operator: "+", value: "", enabled: true }]);
   };
 
   //   rimozione riga
